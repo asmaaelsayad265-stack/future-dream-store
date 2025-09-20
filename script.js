@@ -65,38 +65,12 @@ function getProducts() {
     return products ? JSON.parse(products) : [];
 }
 
-// Load products and display them
-function loadProducts() {
-    const products = getProducts();
-    products.forEach(product => {
-        addProductToUI(product);
-    });
-}
-
-// Add product to UI
-function addProductToUI(product) {
-    const productCard = document.createElement('div');
-    productCard.className = 'product-card';
-    productCard.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" class="product-image">
-        <div class="product-info">
-            <h3 class="product-name">${product.name}</h3>
-            <div class="product-price">${product.price} جنيه</div>
-            <p class="product-description">${product.description}</p>
-            <button onclick="contactUs('${product.name}')" class="buy-btn">اطلب الآن</button>
-        </div>
-    `;
-
-    productsList.appendChild(productCard);
-}
-
-// Show notification
+// Show notification function (using the one from delete-functions.js)
 function showNotification(message, type) {
+    // Add styles
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
     notification.textContent = message;
-
-    // Add styles
     notification.style.cssText = `
         position: fixed;
         top: 20px;
@@ -118,3 +92,33 @@ function showNotification(message, type) {
         notification.remove();
     }, 3000);
 }
+
+// Load products and display them
+function loadProducts() {
+    const products = getProducts();
+    products.forEach(product => {
+        addProductToUI(product);
+    });
+}
+
+// Add product to UI
+function addProductToUI(product) {
+    const productCard = document.createElement('div');
+    productCard.className = 'product-card';
+    productCard.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="product-image">
+        <div class="product-info">
+            <h3 class="product-name">${product.name}</h3>
+            <div class="product-price">${product.price} جنيه</div>
+            <p class="product-description">${product.description}</p>
+            <div class="product-actions">
+                <button onclick="contactUs('${product.name}')" class="buy-btn">اطلب الآن</button>
+                <button onclick="deleteDynamicProduct('${product.id}', '${product.name}')" class="delete-btn">حذف المنتج</button>
+            </div>
+        </div>
+    `;
+
+    productsList.appendChild(productCard);
+}
+
+
