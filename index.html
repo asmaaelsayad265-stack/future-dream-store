@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Dream - محل موبايلات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Future Dream</h1>
+            <p>محل موبايلات</p>
+            <div class="contact-info">
+                <p>📞 010070490 | 01111349853</p>
+                <p>📍 سوهاج - شارع عالم التصوير بجوار مطعم الصديقان</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="add-product">
+                <h2>إضافة منتج جديد</h2>
+                <form id="add-product-form">
+                    <div class="form-group">
+                        <label for="product-name">اسم المنتج:</label>
+                        <input type="text" id="product-name" placeholder="اسم المنتج" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price">السعر:</label>
+                        <input type="number" id="product-price" placeholder="السعر" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">وصف المنتج:</label>
+                        <textarea id="product-description" placeholder="وصف المنتج" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-image">صورة المنتج:</label>
+                        <input type="file" id="product-image" accept="image/*">
+                    </div>
+                    <button type="submit">إضافة المنتج</button>
+                </form>
+            </section>
+
+            <section class="products">
+                <h2>المنتجات</h2>
+                <div id="products-list" class="products-grid">
+                    <!-- Samsung Galaxy A16 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&h=200&fit=crop" alt="Samsung Galaxy A16" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Samsung Galaxy A16</h3>
+                            <div class="product-price">7,000 جنيه</div>
+                            <p class="product-description">- مساحة 128 جيجابايت<br>- رام 6 جيجابايت<br>- كسر زيرو استخدام أيام<br>- بجميع المحتويات</p>
+                            <div class="product-actions">
+                                <button onclick="contactUs('Samsung Galaxy A16')" class="buy-btn">اطلب الآن</button>
+                                <button onclick="deleteProduct('samsung-a16')" class="delete-btn">حذف المنتج</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Huawei Y7 2019 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300&h=200&fit=crop" alt="Huawei Y7 2019" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Huawei Y7 2019</h3>
+                            <div class="product-price">2,000 جنيه</div>
+                            <p class="product-description">- مساحة 64 جيجابايت<br>- رام 3 جيجابايت<br>- كسر بسيط في الباغة<br>- بدون أي محتويات</p>
+                            <div class="product-actions">
+                                <button onclick="contactUs('Huawei Y7 2019')" class="buy-btn">اطلب الآن</button>
+                                <button onclick="deleteProduct('huawei-y7')" class="delete-btn">حذف المنتج</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vivo Y04 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=300&h=200&fit=crop" alt="Vivo Y04" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Vivo Y04</h3>
+                            <div class="product-price">4,600 جنيه</div>
+                            <p class="product-description">- فتح كرتونه فقط<br>- بكل محتوياته</p>
+                            <div class="product-actions">
+                                <button onclick="contactUs('Vivo Y04')" class="buy-btn">اطلب الآن</button>
+                                <button onclick="deleteProduct('vivo-y04')" class="delete-btn">حذف المنتج</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OPPO A18 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&h=200&fit=crop" alt="OPPO A18" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">OPPO A18</h3>
+                            <div class="product-price">5,800 جنيه</div>
+                            <p class="product-description">- كسر زيرو<br>- كرتونه وشاحن</p>
+                            <div class="product-actions">
+                                <button onclick="contactUs('OPPO A18')" class="buy-btn">اطلب الآن</button>
+                                <button onclick="deleteProduct('oppo-a18')" class="delete-btn">حذف المنتج</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OPPO A18 (نسخة ثانية) -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300&h=200&fit=crop" alt="OPPO A18" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">OPPO A18</h3>
+                            <div class="product-price">4,000 جنيه</div>
+                            <p class="product-description">- مساحة 128 جيجابايت<br>- رام 4 جيجابايت<br>- مغير باغة<br>- حالة الجهاز جيدة جدا</p>
+                            <div class="product-actions">
+                                <button onclick="contactUs('OPPO A18')" class="buy-btn">اطلب الآن</button>
+                                <button onclick="deleteProduct('oppo-a18-2')" class="delete-btn">حذف المنتج</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Honor 8c -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=300&h=200&fit=crop" alt="Honor 8c" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Honor 8c</h3>
+                            <div class="product-price">2,000 جنيه</div>
+                            <p class="product-description">- مساحة 32 جيجابايت<br>- رام 2 جيجابايت<br>- حالة الجهاز جيدة<br>- السعر جيد</p>
+                            <div class="product-actions">
+                                <button onclick="contactUs('Honor 8c')" class="buy-btn">اطلب الآن</button>
+                                <button onclick="deleteProduct('honor-8c')" class="delete-btn">حذف المنتج</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vivo Y15 -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&h=200&fit=crop" alt="Vivo Y15" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Vivo Y15</h3>
+                            <div class="product-price">2,100 جنيه</div>
+                            <p class="product-description">- مساحة 32 جيجابايت<br>- رام 2 جيجابايت<br>- حالة الجهاز جيدة</p>
+                            <div class="product-actions">
+                                <button onclick="contactUs('Vivo Y15')" class="buy-btn">اطلب الآن</button>
+                                <button onclick="deleteProduct('vivo-y15')" class="delete-btn">حذف المنتج</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- هاتف غير محدد -->
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=300&h=200&fit=crop" alt="هاتف غير محدد" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">هاتف غير محدد</h3>
+                            <div class="product-price">2,500 جنيه</div>
+                            <p class="product-description">- مساحة 64 جيجابايت<br>- رام 3 جيجابايت<br>- كسر بسيط في الباغة<br>- حالة الجهاز جيدة</p>
+                            <div class="product-actions">
+                                <button onclick="contactUs('هاتف غير محدد')" class="buy-btn">اطلب الآن</button>
+                                <button onclick="deleteProduct('unknown-phone')" class="delete-btn">حذف المنتج</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Oppo A15 -->
+                    <div class="product-card">
+                            <h3 class="product-name">Oppo A38</h3>
+                            <div class="product-price">4,500 جنيه</div>
+                            <p class="product-description">- مساحة 128 جيجابايت<br>- رام 4 جيجابايت<br>- مغير باغة<br>- حالة الجهاز جيدة جدا</p>
+                            <button onclick="contactUs('Oppo A38')" class="buy-btn">اطلب الآن</button>
+                        </div>
+                    </div>
+
+                    <!-- Samsung A03 Core -->
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Samsung+A03+Core" alt="Samsung A03 Core" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Samsung A03 Core</h3>
+                            <div class="product-price">1,900 جنيه</div>
+                            <p class="product-description">- مساحة 32 جيجابايت<br>- رام 2 جيجابايت<br>- مغير باغة<br>- حالة الجهاز جيدة جدا</p>
+                            <button onclick="contactUs('Samsung A03 Core')" class="buy-btn">اطلب الآن</button>
+                        </div>
+                    </div>
+
+                    <!-- Samsung A03 Core (نسخة ثانية) -->
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Samsung+A03+Core" alt="Samsung A03 Core" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Samsung A03 Core</h3>
+                            <div class="product-price">2,200 جنيه</div>
+                            <p class="product-description">- مساحة 32 جيجابايت<br>- رام 2 جيجابايت<br>- حالة الجهاز جيدة جدا</p>
+                            <button onclick="contactUs('Samsung A03 Core')" class="buy-btn">اطلب الآن</button>
+                        </div>
+                    </div>
+
+                    <!-- Redmi 9A -->
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Redmi+9A" alt="Redmi 9A" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Redmi 9A</h3>
+                            <div class="product-price">2,300 جنيه</div>
+                            <p class="product-description">- مساحة 32 جيجابايت<br>- رام 2 جيجابايت<br>- مغير باغة<br>- حالة الجهاز جيدة</p>
+                            <button onclick="contactUs('Redmi 9A')" class="buy-btn">اطلب الآن</button>
+                        </div>
+                    </div>
+
+                    <!-- هاتف Y7 2019 -->
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Huawei+Y7+2019" alt="هاتف Y7 2019" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">هاتف Y7 2019</h3>
+                            <div class="product-price">1,900 جنيه</div>
+                            <p class="product-description">- مساحة 32 جيجابايت<br>- رام 3 جيجابايت<br>- مغير شاشة<br>- حالة الجهاز جيدة</p>
+                            <button onclick="contactUs('هاتف Y7 2019')" class="buy-btn">اطلب الآن</button>
+                        </div>
+                    </div>
+
+                    <!-- Honor X5b Plus -->
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Honor+X5b+Plus" alt="Honor X5b Plus" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Honor X5b Plus</h3>
+                            <div class="product-price">4,500 جنيه</div>
+                            <p class="product-description">- مساحة 128 جيجابايت<br>- رام 4 جيجابايت<br>- كسر زيرو</p>
+                            <button onclick="contactUs('Honor X5b Plus')" class="buy-btn">اطلب الآن</button>
+                        </div>
+                    </div>
+
+                    <!-- Samsung Galaxy A34 5G -->
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Samsung+Galaxy+A34+5G" alt="Samsung Galaxy A34 5G" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Samsung Galaxy A34 5G</h3>
+                            <div class="product-price">9,000 جنيه</div>
+                            <p class="product-description">- مساحة 128 جيجابايت<br>- رام 8 جيجابايت<br>- كسر زيرو</p>
+                            <button onclick="contactUs('Samsung Galaxy A34 5G')" class="buy-btn">اطلب الآن</button>
+                        </div>
+                    </div>
+
+                    <!-- Samsung Galaxy A05s -->
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Samsung+Galaxy+A05s" alt="Samsung Galaxy A05s" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Samsung Galaxy A05s</h3>
+                            <div class="product-price">5,500 جنيه</div>
+                            <p class="product-description">- مساحة 128 جيجابايت<br>- رام 4 جيجابايت<br>- كسر زيرو</p>
+                            <button onclick="contactUs('Samsung Galaxy A05s')" class="buy-btn">اطلب الآن</button>
+                        </div>
+                    </div>
+
+                    <!-- Samsung Galaxy A03s -->
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Samsung+Galaxy+A03s" alt="Samsung Galaxy A03s" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Samsung Galaxy A03s</h3>
+                            <div class="product-price">2,500 جنيه</div>
+                            <p class="product-description">- مساحة 32 جيجابايت<br>- رام 3 جيجابايت<br>- حالة ممتازة</p>
+                            <button onclick="contactUs('Samsung Galaxy A03s')" class="buy-btn">اطلب الآن</button>
+                        </div>
+                    </div>
+
+                    <!-- Samsung Galaxy J4 -->
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=Samsung+Galaxy+J4" alt="Samsung Galaxy J4" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Samsung Galaxy J4</h3>
+                            <div class="product-price">1,500 جنيه</div>
+                            <p class="product-description">- مساحة 16 جيجابايت<br>- رام 2 جيجابايت<br>- حالة جيدة</p>
+                            <button onclick="contactUs('Samsung Galaxy J4')" class="buy-btn">اطلب الآن</button>
+                        </div>
+                    </div>
+
+                    <!-- iPhone 7 -->
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x200?text=iPhone+7" alt="iPhone 7" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">iPhone 7</h3>
+                            <div class="product-price">4,500 جنيه</div>
+                            <p class="product-description">- مساحة 32 جيجابايت<br>- حالة ممتازة<br>- كفاءة بطارية 70%</p>
+                            <button onclick="contactUs('iPhone 7')" class="buy-btn">اطلب الآن</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
